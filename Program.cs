@@ -39,7 +39,7 @@ namespace Pontos_Calculo_LoL
                         Console.Clear();
                         PontoTempo tempo = new PontoTempo();
 
-                        Console.WriteLine("Voce (1) ganhou ou (2) perdeu:a ");
+                        Console.WriteLine("Voce (1) ganhou ou (2) perdeu: ");
                         int WinLoss = int.Parse(Console.ReadLine());
                         if (WinLoss == 1)
                         {
