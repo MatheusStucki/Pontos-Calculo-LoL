@@ -13,7 +13,13 @@ namespace Pontos_Calculo_LoL
             while (escolha != 0)
             {
                 Console.Clear();
-                Console.WriteLine($"Pontos Ganhos: {pontostotal}\nPontos antes de resetar: {backup}\n1- Pontos necessarios para nivel X\n2- Pontos ganhos por tempo de jogo\n3- Restar Pontos\n0- Sair");
+                Console.WriteLine($"Pontos Ganhos: {pontostotal}\nPontos antes de resetar: {backup}" +
+                    $"\n1- Pontos necessarios para nivel X" +
+                    $"\n2- Pontos ganhos por tempo de jogo" +
+                    $"\n3- Restar Pontos" +
+                    $"\n4- Diminuir pontos" +
+                    $"\n5- Aumentar pontos" +
+                    $"\n0- Sair");
                 escolha = int.Parse(Console.ReadLine());
 
                 switch (escolha)
@@ -80,6 +86,20 @@ namespace Pontos_Calculo_LoL
                         Console.WriteLine("Pontos resetados");
                         Console.ReadLine();
                         pontostotal = 0;
+                        break;
+                    case 4:
+                        Console.Clear();
+                        Console.WriteLine($"Arrumar os erros {pontostotal}");
+                        int fix = int.Parse(Console.ReadLine());
+
+                        pontostotal -= fix;
+                        break;
+                    case 5:
+                        Console.Clear();
+                        Console.WriteLine($"Arrumar os erros {pontostotal}");
+                        int fixmais = int.Parse(Console.ReadLine());
+
+                        pontostotal += fixmais;
                         break;
                     default:
                         Console.WriteLine("Numero invalido");

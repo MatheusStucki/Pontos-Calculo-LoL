@@ -29,7 +29,7 @@ namespace Pontos_Calculo_LoL
         public void CalcPontos(int niveis)
         {
             //200 pontos pra 1 nivel sem mt segredo
-            Pontos = niveis * 200;
+            Pontos = niveis * 400;
         }
         public override string ToString()
         {
