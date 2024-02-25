@@ -10,15 +10,18 @@ namespace Pontos_Calculo_LoL
             int Pontos = 0;
             int backup = 0;
             int pontostotal = 0;
+            int resvit = 0;
+            int resdef = 0;
             while (escolha != 0)
             {
                 Console.Clear();
                 Console.WriteLine($"Pontos Ganhos: {pontostotal}\nPontos antes de resetar: {backup}" +
                     $"\n1- Pontos necessarios para nivel X" +
                     $"\n2- Pontos ganhos por tempo de jogo" +
-                    $"\n3- Restar Pontos" +
-                    $"\n4- Diminuir pontos" +
-                    $"\n5- Aumentar pontos" +
+                    $"\n3- Quanto tempo para X ponto" +
+                    $"\n4- Restar Pontos" +
+                    $"\n5- Diminuir pontos" +
+                    $"\n6- Aumentar pontos" +
                     $"\n0- Sair");
                 escolha = int.Parse(Console.ReadLine());
 
@@ -82,19 +85,30 @@ namespace Pontos_Calculo_LoL
                         }
                     case 3:
                         Console.Clear();
+                        Console.Write("Quantos Pontos voce precisa: ");
+                        int neces = int.Parse(Console.ReadLine());
+                        Console.Clear();
+                        resvit = neces / 6;
+                        Console.WriteLine("se ganhar o resultado é " + resvit + " min");
+                        resdef = neces / 4;
+                        Console.WriteLine("se perder o resultado é " + resdef + " min");
+                        Console.ReadLine();
+                        break;
+                    case 4:
+                        Console.Clear();
                         backup = pontostotal;
                         Console.WriteLine("Pontos resetados");
                         Console.ReadLine();
                         pontostotal = 0;
                         break;
-                    case 4:
+                    case 5:
                         Console.Clear();
                         Console.WriteLine($"Arrumar os erros {pontostotal}");
                         int fix = int.Parse(Console.ReadLine());
 
                         pontostotal -= fix;
                         break;
-                    case 5:
+                    case 6:
                         Console.Clear();
                         Console.WriteLine($"Arrumar os erros {pontostotal}");
                         int fixmais = int.Parse(Console.ReadLine());

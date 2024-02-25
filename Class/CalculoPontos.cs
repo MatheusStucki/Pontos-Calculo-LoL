@@ -15,20 +15,20 @@ namespace Pontos_Calculo_LoL
 
         public void CalcTempoMin(int niveis)
         {
-            //leva 33 min para 1 level se ganhar ele da 198 pontos mas eu considerei com 200 msm
-            TempoMin = niveis * 33;
+            //level * a quantidade de ponto pra 1 / pelos pontos ganhos
+            TempoMin = (niveis * 400) / 6;
             TempoMin = TempoMin / 60;
         }
 
         public void CalcTempoMax(int niveis)
         {
-            //leva 50min para 1 levo se perder
-            TempoMax = niveis * 50;
+            //level * a quantidade de ponto pra 1 / pelos pontos ganhos
+            TempoMax = (niveis * 400)/ 4;
             TempoMax = TempoMax / 60;
         }
         public void CalcPontos(int niveis)
         {
-            //200 pontos pra 1 nivel sem mt segredo
+            //400 pontos pra 1 nivel sem mt segredo
             Pontos = niveis * 400;
         }
         public override string ToString()
